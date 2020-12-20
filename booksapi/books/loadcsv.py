@@ -1,7 +1,5 @@
 import csv
 import os
-from django.shortcuts import render
-from rest_framework import viewsets
 from .models import Book
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

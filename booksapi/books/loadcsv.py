@@ -5,7 +5,7 @@ from rest_framework import viewsets
 from .models import Book
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-path = os.path.join(BASE_DIR, 'books/static/booksapi/bestsellers-with-categories.csv')
+path = os.path.join(BASE_DIR, 'static/booksapi/bestsellers-with-categories.csv')
 with open(path) as f:
     reader = csv.reader(f)
     next(reader, None)  # skip the headers

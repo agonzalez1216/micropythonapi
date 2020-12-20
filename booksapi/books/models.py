@@ -2,6 +2,7 @@ from django.db import models
 import csv
 # Create your models here.
 
+
 class Book(models.Model):
     name = models.CharField(max_length=256)
     author = models.CharField(max_length=128)
@@ -15,8 +16,7 @@ class Book(models.Model):
         return self.name
 
 
-path = \
-    "https://raw.githubusercontent.com/agonzalez1216/micropythonapi/main/booksapi/books/bestsellers-with-categories.csv"
+path = "booksapi/static/booksapi/bestsellers-with-categories.csv"
 with open(path) as f:
     reader = csv.reader(f)
     next(reader, None)  # skip the headers

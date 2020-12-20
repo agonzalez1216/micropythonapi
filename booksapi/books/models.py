@@ -16,7 +16,7 @@ class Book(models.Model):
         return self.name
 
 
-path = "/booksapi/books/static/booksapi/bestsellers-with-categories.csv"
+path = "/static/booksapi/bestsellers-with-categories.csv"
 with open(path) as f:
     reader = csv.reader(f)
     next(reader, None)  # skip the headers

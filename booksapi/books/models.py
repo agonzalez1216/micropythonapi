@@ -1,5 +1,6 @@
 from django.db import models
 import csv
+import os
 # Create your models here.
 
 
@@ -16,7 +17,8 @@ class Book(models.Model):
         return self.name
 
 
-path = "/static/booksapi/bestsellers-with-categories.csv"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+path = os.path.join(BASE_DIR, 'books/static/booksapi/bestsellers-with-categories.csv')
 with open(path) as f:
     reader = csv.reader(f)
     next(reader, None)  # skip the headers

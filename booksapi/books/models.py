@@ -15,7 +15,7 @@ class Book(models.Model):
         return self.name
 
 
-path = "/Users/alfonso/micropython/micropythonapi/bestsellers-with-categories.csv"
+path = "micropythonapi/bestsellers-with-categories.csv"
 with open(path) as f:
     reader = csv.reader(f)
     next(reader, None)  # skip the headers
